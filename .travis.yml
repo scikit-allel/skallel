@@ -1,0 +1,23 @@
+language: python
+branches:
+  only:
+  - master
+  - "/v\\d+\\.\\d+\\.\\d+([ab]\\d)?/"
+sudo: false
+matrix:
+  include:
+  - python: 3.7
+    dist: xenial
+    sudo: true
+install:
+- pip install -U pip setuptools wheel tox-travis
+script:
+- tox
+deploy:
+  provider: pypi
+  user: aliman
+  password:
+    secure: Y8GvzhQv/Y+zlOnVxgWMR5bfj0c5T3vHCQ1LC9f4cbwysb5CcS+w7KoT0nzQkfttngiZefewXZZcsVfkKXmuHJnP/tQmmolBxo0iuIgJpginlcxJUL4Y8OXvFNdo/SZdkQmxvXEfD+UqBLWf99Umu86GpgTBJrGXwN+ZPmEUfJkbb2hbH8UFI/Yjg11EdXxFk3yvPli5bjUSYXsZQllFfPivnMKqAIHPRHs2ZQvu8b1ck/mNZF/zk77NxTbNsh0JWaZgV09L3tN1b6CFhNwMrQM7TGVQFpBeP+kjducV0ylP5yXn2ZurPdL5cl1VBxj8FhVzLAW0hBifxBv/uuBSOjiWU83PFPutXK/wmd6AQP8/SX+VROWX2Xtn7/EtQNkvAq+sYCXEo6zct/76OFjqVNdQoi+ed5JrJ/2uM8KmJwPOEWdn4NU078Vik3V3x10gfKJCifLjFHikBKSLKAIx5T4mNc4ETvXafDmvMiKwmUUT6boAFV31u82J39pIDdzrkzBycEAFGaqJQmqpEm2R3jyWGdC0//K9o9Im1tZjzOub0ViMuJBBuljVstS4QYtfcXuOxsyzCnxISZEmBSQnH/U7JlUExGPSz6Vzh5OxB/upavwxTcSpKuFXxhb2D9pegwl2aAPOP+42a2iItgEueOxoBDpFvZ9dbz6SUlfoM6M=
+  on:
+    tags: true
+  skip_existing: true
