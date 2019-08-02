@@ -1,0 +1,23 @@
+# Pinned requirements used for CI and development environments.
+#
+# library requirements
+multipledispatch==0.6.0
+numba==0.45.0
+numpy==1.16.4
+scipy==1.3.0
+dask[complete]==2.1.0
+pandas==0.25.0
+skallel_tensor>=0.1.0a4
+#
+# test requirements
+tox==3.13.2
+pytest==5.0.1
+pytest-cov==2.7.1
+flake8==3.7.8
+coverage==4.5.3
+coveralls==1.8.1
+setuptools-scm==3.3.3
+asv==0.4.1
+zarr==2.3.2
+# workaround for https://github.com/pypa/packaging/issues/170
+pyparsing==2.4.0
