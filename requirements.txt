@@ -1,0 +1,15 @@
+# Pinned requirements used for CI and development environments.
+#
+# doc requirements
+sphinx==2.1.2
+sphinx-issues==1.2.0
+numpydoc==0.9.1
+mock==3.0.5
+#
+# test requirements
+tox==3.13.2
+pytest==5.0.1
+flake8==3.7.8
+setuptools-scm==3.3.3
+# workaround for https://github.com/pypa/packaging/issues/170
+pyparsing==2.4.0
