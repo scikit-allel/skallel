@@ -20,11 +20,15 @@ You can install scikit-allel version 2 alongside version 1, they will
 not interfere with each other. scikit-allel version 2 uses the new
 ``skallel`` namespace, whereas scikit-allel version 1 uses the
 ``allel`` namespace.
-    
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
 
+
+Contents
+========
+
+.. toctree::
+    :maxdepth: 3
+
+    api
 
 
 Indices and tables

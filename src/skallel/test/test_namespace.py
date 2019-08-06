@@ -17,6 +17,7 @@ def test_namespace():
     assert callable(skallel.allele_counts_to_frequencies)
     assert callable(skallel.allele_counts_allelism)
     assert callable(skallel.allele_counts_max_allele)
+    assert callable(skallel.variants_to_dataframe)
     assert callable(skallel.select_slice)
     assert callable(skallel.select_indices)
     assert callable(skallel.select_mask)

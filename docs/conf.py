@@ -13,6 +13,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import skallel
 
 
 # -- Project information -----------------------------------------------------
@@ -20,6 +21,8 @@
 project = 'scikit-allel (version 2)'
 copyright = '2019, scikit-allel developers'
 author = 'scikit-allel developers'
+version = '.'.join(skallel.__version__.split('.')[:3])
+release = skallel.__version__
 
 
 # -- General configuration ---------------------------------------------------
@@ -27,8 +30,9 @@ author = 'scikit-allel developers'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-]
+extensions = ['sphinx.ext.autodoc', 'numpydoc', 'sphinx_issues']
+
+issues_github_path = 'scikit-allel/skallel'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
