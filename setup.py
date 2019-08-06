@@ -6,7 +6,7 @@ setup(
     packages=find_packages("src"),
     package_dir={"": "src"},
     setup_requires=["setuptools>18.0", "setuptools-scm>1.5.4"],
-    install_requires=["skallel_tensor>=0.1.0a6", "skallel_stats>=0.1.0a8"],
+    install_requires=["skallel_tensor>=0.1.0a8", "skallel_stats>=0.1.0a9"],
     use_scm_version={
         "version_scheme": "guess-next-dev",
         "local_scheme": "dirty-tag",

@@ -5,6 +5,8 @@ sphinx==2.1.2
 sphinx-issues==1.2.0
 numpydoc==0.9.1
 mock==3.0.5
+# don't use sphinx_rtd_theme for now, xref https://github.com/numpy/numpydoc/issues/215
+# sphinx-rtd-theme==0.4.3
 #
 # test requirements
 tox==3.13.2

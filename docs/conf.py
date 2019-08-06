@@ -13,13 +13,17 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import skallel
+# import sphinx_rtd_theme
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'scikit-allel (version 2)'
+project = 'scikit-allel'
 copyright = '2019, scikit-allel developers'
 author = 'scikit-allel developers'
+version = '.'.join(skallel.__version__.split('.')[:3])
+release = skallel.__version__
 
 
 # -- General configuration ---------------------------------------------------
@@ -28,7 +32,13 @@ author = 'scikit-allel developers'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.autodoc',
+    'numpydoc',
+    'sphinx_issues',
+    # 'sphinx_rtd_theme'
 ]
+
+issues_github_path = 'scikit-allel/skallel'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -44,7 +54,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+# don't use sphinx_rtd_theme for now, xref https://github.com/numpy/numpydoc/issues/215
+# html_theme = 'sphinx_rtd_theme'
+html_theme = 'haiku'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
