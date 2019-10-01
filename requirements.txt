@@ -14,4 +14,4 @@ pytest==5.2.0
 flake8==3.7.8
 setuptools-scm==3.3.3
 # workaround for https://github.com/pypa/packaging/issues/170
-pyparsing==2.4.0
+pyparsing==2.4.2
